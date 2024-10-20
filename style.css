@@ -704,5 +704,15 @@ p {
   color: #007bff; /* Custom color */
   font-size: 20px; /* Size of the marker */
 }
+#a
+{
+  height: 30px;
+  width: 30px;
+}
+#registration a img,.b
+{
+  height: 20px;
+  width:20px;
+}
 
 
