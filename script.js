@@ -153,17 +153,36 @@ window.onclick = function(event) {
       modal.style.display = 'none';
   }
 };
-document.addEventListener('DOMContentLoaded', function () {
-        // Initialize the confetti
-        var confetti = window.confetti;
+  document.addEventListener('DOMContentLoaded', function () {
+        // Function to launch confetti from multiple positions
+        function launchConfetti() {
+            const duration = 5 * 1000; // Duration of confetti in milliseconds (5 seconds)
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-        // Set up the confetti parameters
-        confetti({
-            particleCount: 100, // Number of particles
-            spread: 360,         // Spread angle
-            origin: {
-                x: 0.5,         // Horizontal position (0 to 1)
-                y: 0.5          // Vertical position (0 to 1)
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
             }
-        });
+
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                // Create a burst of confetti from a random position on the screen
+                confetti(Object.assign({}, defaults, {
+                    particleCount: 50, // Number of particles per burst
+                    spread: 360,       // Full 360-degree spread
+                    origin: {
+                        x: Math.random(), // Random horizontal position (0 to 1)
+                        y: Math.random() - 0.2 // Slightly random vertical position (0 to 1, -0.2 for top spawn)
+                    }
+                }));
+            }, 250); // Launch confetti every 250 milliseconds
+        }
+
+        // Start the confetti
+        launchConfetti();
     });
