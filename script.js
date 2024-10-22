@@ -132,9 +132,7 @@ function showEventDetails(eventItem) {
   if (eventData) {
       document.getElementById('modalTitle').innerText = eventData.title;
       document.getElementById('modalDescription').innerHTML = eventData.details; // Use innerHTML for formatting
-      document.getElementById('modalDate').innerText = eventItem.getAttribute('data-date');
-      document.getElementById('modalVenue').innerText = eventItem.getAttribute('data-venue');
-      document.getElementById('modalRules').innerText = eventItem.getAttribute('data-rules');
+    
 
       const modal = document.getElementById('eventModal');
       modal.style.display = 'block'; // Show the modal
