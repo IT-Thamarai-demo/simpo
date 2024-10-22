@@ -153,32 +153,48 @@ window.onclick = function(event) {
       modal.style.display = 'none';
   }
 };
-// function launchConfetti() {
-//             const duration = 5 * 1000; // 5 seconds duration
-//             const animationEnd = Date.now() + duration;
-//             const defaults = { 
-//                 startVelocity: 30, 
-//                 spread: 360, 
-//                 ticks: 60, 
-//                 zIndex: 0,
-//                 scalar: 2  // Increase the size of the particles (default is 1)
-//             };
+ function launchConfetti() {
+            const duration = 5 * 1000; // 5 seconds duration
+            const animationEnd = Date.now() + duration;
+            const defaults = { 
+                startVelocity: 30, 
+                spread: 360, 
+                ticks: 60, 
+                zIndex: 9999, // Bring confetti to the top
+                scalar: 2  // Increase the size of the particles
+            };
 
-//             const interval = setInterval(function () {
-//                 const timeLeft = animationEnd - Date.now();
+            const interval = setInterval(function () {
+                const timeLeft = animationEnd - Date.now();
 
-//                 if (timeLeft <= 0) {
-//                     return clearInterval(interval);
-//                 }
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                }
 
-//                 // Create a burst of confetti from a random position
-//                 confetti(Object.assign({}, defaults, {
-//                     particleCount: 50, // Number of particles
-//                     spread: 360,       // Full circle spread
-//                     origin: {
-//                         x: Math.random(),  // Random horizontal position
-//                         y: Math.random()   // Random vertical position
-//                     }
-//                 }));
-//             }, 250); // Launch confetti every 250 milliseconds
-//         }
+                // Create a burst of confetti from random positions around the screen
+                confetti(Object.assign({}, defaults, {
+                    particleCount: 100, // Increase particle count for a more intense effect
+                    spread: 360,        // Full circle spread
+                    origin: {
+                        x: Math.random(),  // Random horizontal position
+                        y: Math.random()   // Random vertical position
+                    }
+                }));
+            }, 250); // Launch confetti every 250 milliseconds
+        }
+
+        // Function to scroll to the last section
+        function scrollToLastSection() {
+            const lastSection = document.getElementById('last-section');
+            if (lastSection) {
+                lastSection.scrollIntoView({ behavior: 'smooth' });
+                // Delay the confetti launch a bit after scrolling completes
+                setTimeout(launchConfetti, 1000); // 1-second delay after scrolling
+            }
+        }
+
+        // Execute when the page is fully loaded
+        window.onload = function() {
+            // Scroll to the last section after a brief delay on page load
+            setTimeout(scrollToLastSection, 1000); // 1-second delay before scrolling
+        };
