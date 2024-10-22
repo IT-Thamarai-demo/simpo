@@ -153,16 +153,16 @@ window.onclick = function(event) {
       modal.style.display = 'none';
   }
 };
-  document.addEventListener('DOMContentLoaded', function () {
-        // Function to launch confetti from multiple positions
-        function launchConfetti() {
-            const duration = 5 * 1000; // Duration of confetti in milliseconds (5 seconds)
+function launchConfetti() {
+            const duration = 5 * 1000; // 5 seconds duration
             const animationEnd = Date.now() + duration;
-            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
-
-            function randomInRange(min, max) {
-                return Math.random() * (max - min) + min;
-            }
+            const defaults = { 
+                startVelocity: 30, 
+                spread: 360, 
+                ticks: 60, 
+                zIndex: 0,
+                scalar: 2  // Increase the size of the particles (default is 1)
+            };
 
             const interval = setInterval(function () {
                 const timeLeft = animationEnd - Date.now();
@@ -171,18 +171,14 @@ window.onclick = function(event) {
                     return clearInterval(interval);
                 }
 
-                // Create a burst of confetti from a random position on the screen
+                // Create a burst of confetti from a random position
                 confetti(Object.assign({}, defaults, {
-                    particleCount: 50, // Number of particles per burst
-                    spread: 360,       // Full 360-degree spread
+                    particleCount: 50, // Number of particles
+                    spread: 360,       // Full circle spread
                     origin: {
-                        x: Math.random(), // Random horizontal position (0 to 1)
-                        y: Math.random() - 0.2 // Slightly random vertical position (0 to 1, -0.2 for top spawn)
+                        x: Math.random(),  // Random horizontal position
+                        y: Math.random()   // Random vertical position
                     }
                 }));
             }, 250); // Launch confetti every 250 milliseconds
         }
-
-        // Start the confetti
-        launchConfetti();
-    });
