@@ -183,15 +183,4 @@ window.onclick = function(event) {
             }, 250); // Launch confetti every 250 milliseconds
         }
 
-        // Function to scroll to the last section
-        function scrollToLastSection() {
-            const lastSection = document.getElementById('last-section');
-            if (lastSection) {
-                lastSection.scrollIntoView({ behavior: 'smooth' });
-                // Delay the confetti launch a bit after scrolling completes
-                setTimeout(launchConfetti, 1000); // 1-second delay after scrolling
-            }
-        }
 
-        };
-scrollToLastSection();
