@@ -153,3 +153,17 @@ window.onclick = function(event) {
       modal.style.display = 'none';
   }
 };
+document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the confetti
+        var confetti = window.confetti;
+
+        // Set up the confetti parameters
+        confetti({
+            particleCount: 100, // Number of particles
+            spread: 360,         // Spread angle
+            origin: {
+                x: 0.5,         // Horizontal position (0 to 1)
+                y: 0.5          // Vertical position (0 to 1)
+            }
+        });
+    });
