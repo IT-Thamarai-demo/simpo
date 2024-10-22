@@ -193,8 +193,5 @@ window.onclick = function(event) {
             }
         }
 
-        // Execute when the page is fully loaded
-        window.onload = function() {
-            // Scroll to the last section after a brief delay on page load
-            setTimeout(scrollToLastSection, 1000); // 1-second delay before scrolling
         };
+scrollToLastSection();
