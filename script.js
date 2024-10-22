@@ -153,32 +153,32 @@ window.onclick = function(event) {
       modal.style.display = 'none';
   }
 };
-function launchConfetti() {
-            const duration = 5 * 1000; // 5 seconds duration
-            const animationEnd = Date.now() + duration;
-            const defaults = { 
-                startVelocity: 30, 
-                spread: 360, 
-                ticks: 60, 
-                zIndex: 0,
-                scalar: 2  // Increase the size of the particles (default is 1)
-            };
+// function launchConfetti() {
+//             const duration = 5 * 1000; // 5 seconds duration
+//             const animationEnd = Date.now() + duration;
+//             const defaults = { 
+//                 startVelocity: 30, 
+//                 spread: 360, 
+//                 ticks: 60, 
+//                 zIndex: 0,
+//                 scalar: 2  // Increase the size of the particles (default is 1)
+//             };
 
-            const interval = setInterval(function () {
-                const timeLeft = animationEnd - Date.now();
+//             const interval = setInterval(function () {
+//                 const timeLeft = animationEnd - Date.now();
 
-                if (timeLeft <= 0) {
-                    return clearInterval(interval);
-                }
+//                 if (timeLeft <= 0) {
+//                     return clearInterval(interval);
+//                 }
 
-                // Create a burst of confetti from a random position
-                confetti(Object.assign({}, defaults, {
-                    particleCount: 50, // Number of particles
-                    spread: 360,       // Full circle spread
-                    origin: {
-                        x: Math.random(),  // Random horizontal position
-                        y: Math.random()   // Random vertical position
-                    }
-                }));
-            }, 250); // Launch confetti every 250 milliseconds
-        }
+//                 // Create a burst of confetti from a random position
+//                 confetti(Object.assign({}, defaults, {
+//                     particleCount: 50, // Number of particles
+//                     spread: 360,       // Full circle spread
+//                     origin: {
+//                         x: Math.random(),  // Random horizontal position
+//                         y: Math.random()   // Random vertical position
+//                     }
+//                 }));
+//             }, 250); // Launch confetti every 250 milliseconds
+//         }
