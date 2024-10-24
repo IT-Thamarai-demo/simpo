@@ -229,3 +229,5 @@ window.onload = function() {
 
         // Add event listener to the button
         document.getElementById('notifyBtn').addEventListener('click', checkAndShowNotification);
+requestNotificationPermission();
+showNotification();
