@@ -715,4 +715,7 @@ p {
   width:20px;
 }
 
-
+nav ul li:hover
+{
+  font-size: 20px;
+}
