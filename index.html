@@ -20,6 +20,54 @@
   <!-- Custom CSS -->
   <link rel="icon" type="image/X-icon" href="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg">
   <link rel="stylesheet" href="style.css">
+  <script>
+    function requestNotificationPermission() {
+            if (Notification.permission === "default") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        console.log("Notification permission granted.");
+                        showNotification(); // Show notification if permission is granted
+                    } else {
+                        console.log("Notification permission denied.");
+                    }
+                });
+            } else if (Notification.permission === "granted") {
+                showNotification(); // Show notification if permission was already granted
+            }
+        }
+
+        // Function to show notification
+        function showNotification() {
+            const notificationTitle = "National Level Technical Symposium";
+            const notificationBody = "Join us for the National Level Technical Symposium on 15/11/2024 at UCEV.";
+
+            const notification = new Notification(notificationTitle, {
+                body: notificationBody,
+                icon: 'https://example.com/icon.png' // Optional: Add an icon URL
+            });
+
+            notification.onclick = () => {
+                window.open(''); // Optional: URL to open on click
+            };
+        }
+
+        // Function to check if notification has been shown before
+        function checkAndShowNotification() {
+            const hasNotified = localStorage.getItem('hasNotified');
+
+            if (!hasNotified) {
+                requestNotificationPermission();
+                localStorage.setItem('hasNotified', 'true'); // Set flag to prevent future notifications
+            } else {
+                console.log("Notification has already been shown.");
+            }
+        }
+        requestNotificationPermission()
+        showNotification()
+        // Call the check function on page load
+        
+        
+  </script>
 </head>
 <body>
   <!-- Navbar -->
@@ -105,62 +153,64 @@
     </section>
 
     <div class="row" id="events">
-        <div class="bg-primary bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
-            <h3>Technical Events</h5>
-            <br>
-            <ul class="event-list">
-                <li class="event-item ideathon list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event="ideathon"  onclick="showEventDetails(this)">
-                    <span>🎉</span> Ideathon: Paper Presentation
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-                <li class="event-item tech-post bg-light text-dark" data-event="tech-post"  onclick="showEventDetails(this)">
-                    <span>📊</span> Tech Post: Poster Presentation
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-                <li class="event-item bug-hunt bg-light text-dark" data-event="bug-hunt" onclick="showEventDetails(this)">
-                    <span>🔍</span> Bug Hunt: Debugging
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-            </ul>
-        </div>
+      <div class="bg-primary bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
+          <h3>Technical Events</h3>
+          <br>
+          <ul class="event-list">
+              <li class="event-item ideathon list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="ideathon" onclick="showEventDetails(this)">
+                  <span>🎉</span> Ideathon: Paper Presentation
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+              <li class="event-item tech-post list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="tech-post" onclick="showEventDetails(this)">
+                  <span>📊</span> Tech Post: Poster Presentation
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+              <li class="event-item bug-hunt list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="bug-hunt" onclick="showEventDetails(this)">
+                  <span>🔍</span> Bug Hunt: Debugging
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+          </ul>
+      </div>
       <br>
-        <div class="bg-success bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
-            <h3>Non-Technical Events</h5>
-            <br>
-            <ul class="event-list">
-                <li class="event-item linkup bg-light text-dark" data-event="linkup" data-date="Date: TBD" data-venue="Venue: TBD" data-rules="Rules: TBD" onclick="showEventDetails(this)">
-                    <span>🔗</span> Linkup: Connection
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-                <li class="event-item mind-speak bg-light text-dark" data-event="mind-speak"  onclick="showEventDetails(this)">
-                    <span>🗣</span> MindSpeak: Dialogue Sharing
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-                <li class="event-item verbo-clash bg-light text-dark" data-event="verbo-clash"  onclick="showEventDetails(this)">
-                    <span>🗣️</span> Verbo Clash: Debate
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-                <li class="event-item cyber-showdown bg-light text-dark" data-event="cyber-showdown"  onclick="showEventDetails(this)">
-                    <span>🎮</span> Cyber Showdown: E-Sports
-                    <button class="btn btn-info btn-sm float-right">View More</button>
-                </li>
-            </ul>
-        </div>
-    </div>
+      <div class="bg-success bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
+          <h3>Non-Technical Events</h3>
+          <br>
+          <ul class="event-list">
+              <li class="event-item linkup list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="linkup" onclick="showEventDetails(this)">
+                  <span>🔗</span> Linkup: Connection
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+              <li class="event-item mind-speak list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="mind-speak" onclick="showEventDetails(this)">
+                  <span>🗣</span> MindSpeak: Dialogue Sharing
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+              <li class="event-item verbo-clash list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="verbo-clash" onclick="showEventDetails(this)">
+                  <span>🗣️</span> Verbo Clash: Debate
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+              <li class="event-item cyber-showdown list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="cyber-showdown" onclick="showEventDetails(this)">
+                  <span>🎮</span> Cyber Showdown: E-Sports
+                  <button class="btn btn-info btn-sm float-right">View More</button>
+              </li>
+          </ul>
+      </div>
+  </div>
 </div>
 
 <!-- Popup Modal -->
 
-<div class="modal" id="eventModal">
-    <div class="modal-content">
-        <span class="close" id="closeModal">❌</span>
-        <h2 id="modalTitle"><img id="a" class="b" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg"></h2>
-        <p id="modalDescription"></p>
-        <p id="modalDate"></p>
-        <p id="modalVenue"></p>
-        <p id="modalRules"></p>
-    </div>
+<div class="modal" id="eventModal" style="display: none;">
+  <div class="modal-content">
+      <span class="close" id="closeModal">❌</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <p id="modalDate"></p>
+      <p id="modalVenue"></p>
+      <p id="modalRules"></p>
+  </div>
 </div>
+
+
 </section>
   <!-- Registration Section -->
   <section id="registration" class="py-5">
