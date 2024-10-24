@@ -185,30 +185,33 @@ window.onclick = function(event) {
 window.onload = function() {
     launchConfetti();
 };
- function requestNotificationPermission() {
+   function requestNotificationPermission() {
             if (Notification.permission === "default") {
                 Notification.requestPermission().then(permission => {
                     if (permission === "granted") {
                         console.log("Notification permission granted.");
+                        showNotification(); // Show notification if permission is granted
                     } else {
                         console.log("Notification permission denied.");
                     }
                 });
+            } else if (Notification.permission === "granted") {
+                showNotification(); // Show notification if permission was already granted
             }
         }
 
         // Function to show notification
         function showNotification() {
             const notificationTitle = "National Level Technical Symposium";
-            const notificationBody = "Join us for the National Level Technical Symposium on [16] at [Villupuram].";
+            const notificationBody = "Join us for the National Level Technical Symposium on [Date] at [Location].";
 
             const notification = new Notification(notificationTitle, {
                 body: notificationBody,
-                icon: 'WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg' // Optional: Add an icon URL
+                icon: 'https://example.com/icon.png' // Optional: Add an icon URL
             });
 
             notification.onclick = () => {
-                window.open('https://docs.google.com/forms/d/e/1FAIpQLSf3AQc5nA7CcM41Ljgsv3VVokAe692YhAJIMaCPk3xLKar0Zg/viewform'); // Optional: URL to open on click
+                window.open('https://example.com'); // Optional: URL to open on click
             };
         }
 
@@ -218,16 +221,11 @@ window.onload = function() {
 
             if (!hasNotified) {
                 requestNotificationPermission();
-                setTimeout(() => {
-                    showNotification();
-                    localStorage.setItem('hasNotified', 'true'); // Set flag to prevent future notifications
-                }, 1000); // Delay notification
+                localStorage.setItem('hasNotified', 'true'); // Set flag to prevent future notifications
             } else {
                 console.log("Notification has already been shown.");
             }
         }
 
-        // Add event listener to the button
-        document.getElementById('notifyBtn').addEventListener('click', checkAndShowNotification);
-requestNotificationPermission();
-showNotification();
+        // Call the check function on page load
+        window.onload = checkAndShowNotification;
