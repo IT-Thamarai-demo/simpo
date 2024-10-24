@@ -154,7 +154,7 @@ window.onclick = function(event) {
   }
 };
  function launchConfetti() {
-            const duration = 5 * 1000; // 5 seconds duration
+            const duration = 1.5 * 1000; // 5 seconds duration
             const animationEnd = Date.now() + duration;
             const defaults = { 
                 startVelocity: 30, 
@@ -185,3 +185,47 @@ window.onclick = function(event) {
 window.onload = function() {
     launchConfetti();
 };
+ function requestNotificationPermission() {
+            if (Notification.permission === "default") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        console.log("Notification permission granted.");
+                    } else {
+                        console.log("Notification permission denied.");
+                    }
+                });
+            }
+        }
+
+        // Function to show notification
+        function showNotification() {
+            const notificationTitle = "National Level Technical Symposium";
+            const notificationBody = "Join us for the National Level Technical Symposium on [16] at [Villupuram].";
+
+            const notification = new Notification(notificationTitle, {
+                body: notificationBody,
+                icon: 'WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg' // Optional: Add an icon URL
+            });
+
+            notification.onclick = () => {
+                window.open('https://docs.google.com/forms/d/e/1FAIpQLSf3AQc5nA7CcM41Ljgsv3VVokAe692YhAJIMaCPk3xLKar0Zg/viewform'); // Optional: URL to open on click
+            };
+        }
+
+        // Function to check if notification has been shown before
+        function checkAndShowNotification() {
+            const hasNotified = localStorage.getItem('hasNotified');
+
+            if (!hasNotified) {
+                requestNotificationPermission();
+                setTimeout(() => {
+                    showNotification();
+                    localStorage.setItem('hasNotified', 'true'); // Set flag to prevent future notifications
+                }, 1000); // Delay notification
+            } else {
+                console.log("Notification has already been shown.");
+            }
+        }
+
+        // Add event listener to the button
+        document.getElementById('notifyBtn').addEventListener('click', checkAndShowNotification);
