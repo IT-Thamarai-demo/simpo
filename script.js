@@ -182,3 +182,6 @@ window.onclick = function(event) {
                 }));
             }, 250); // Launch confetti every 250 milliseconds
         }
+window.onload = function() {
+    launchConfetti();
+};
