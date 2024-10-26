@@ -38,113 +38,102 @@ $(document).ready(function() {
 // Event data object
 const events = {
     "ideathon": {
-        title: "🎉Ideathon: Paper Presentation",
+        Image:"paper.jpeg",
+        title: "🎉 Kertas",
         details: "A paper presentation event focusing on current technology in the Engineering field.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Team Composition: A team should consist of a minimum of 1 member and a maximum of 4 members.",
-            "Time Allocated: Each team has 5 minutes to present, including 4 minutes for the presentation and 1 minute for Q&A.",
-            "Domain: The paper must be related to current technology in the Engineering field.",
-            "Paper Format: Papers should adhere to the IEEE format.",
-            "Submission: Each team must submit their PowerPoint presentation (PPT) during the registration process."
-        ],
-        date: "15/11/2024",
-        venue: "UCEV"
+        rules: [ 
+            "1. Each team can have up to 4 members.",
+            "2. Teams have 5 minutes to present: 4 minutes for the presentation and 1 minute for Q&A.",
+            "3. The paper must relate to current technology in the engineering field.",
+            "4. Papers should follow the IEEE form",
+            "5. Each team must submit their PowerPoint (PPT) During registration.",
+        ]
     },
     "tech-post": {
-        title: "📊 Tech Post: Poster Presentation",
+        Image:"PosterPresentation.jpeg",
+        title: "📊 Poster Presentation",
         details: "Present a poster on technological innovations and concepts.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Clarity: Ensure the poster is easy to read from a distance.",
-            "Structure: Follow a logical flow (title, introduction, methods, results, conclusions, references).",
-            "Stationary: Necessary stationary items like pen, pencil, sketch, etc., should be brought by the participants.",
-            "Visuals: Use graphs, charts, images, and diagrams effectively.",
-            "Conciseness: Avoid overcrowding the poster with excessive text.",
-            "Technical Content: Explain technical terms and concepts clearly.",
-            "Design: Use engineering drawings, photographs, and color coding.",
-            "Presentation: Be prepared to discuss technical aspects in detail.",
-            "Audience Engagement: Tailor your presentation to the audience's interests.",
-            "Q&A: Anticipate technical questions and provide clear answers."
+        rules: [ 
+            "1. Individual Participation.",
+            "2. Topics will be provided on the spot.",
+            "3. Ensure the poster is readable from a distance.",
+            "4. A3 sheets will be provided",
+            "5. Follow a logical structure (Title, Introduction, Methods, Results, Conclusions, References) and use diagrams effectively.",
+            "6. Bring necessary stationery like pens, pencils, and markers.",
         ],
         date: "15/11/2024",
         venue: "UCEV"
     },
     "bug-hunt": {
-        title: "🔍 Bug Hunt: Debugging",
+        Image:"bughunt 1.jpeg",
+        title: "🔍  Debugging",
         details: "Debugging challenges to test your programming skills.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "HackerRank Account: All participants must have a valid HackerRank account to enter the contest.",
-            "Event Duration: The event will last exactly 1 hour and 30 minutes; no submissions will be accepted after the time limit expires.",
-            "Code Debugging: Participants are required to debug the provided code snippets and submit correct solutions within the time frame.",
-            "Programming Language Flexibility: While questions will be provided in Python, participants can solve them using any language they are proficient in, as long as it's available on the HackerRank platform."
+        rules: [ 
+            "A Hacker account is required.",
+            "C, Python, and Java programming languages are allowed.",
+            "Scores will be assigned based on two criteria: the number of bugs successfully resolved and the total time taken to fix all issues in the code snippet.",
+            "The top performer will be selected based on score "
         ],
         date: "15/11/2024",
         venue: "UCEV"
     },
     "linkup": {
-        title: "🔗 Linkup: Connection",
+        Image:"link.jpeg",
+        title: "🔗 Linkup:",
         details: "A team-based event to solve connection puzzles.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Common Round: All teams will be shown 4 connections. The first four teams to solve these will move to Round 1.",
-            "Round 1: Each of the four teams will be given 4 connections to solve.",
-            "Round 2: The final two teams will be given 3 connections each.",
-            "Buzzer Rule: The team that presses the buzzer first gets the right to answer. If their answer is correct, they score; if not, the opposing team gets a chance to answer."
+        rules: [ 
+            "Maximum 3 members per team",
+            "Teams compete to identify connections between related clues.",
+            "The team with the more points advances to the next round.",
+            "If the answering player is incorrect, the opposite team gains the point.",
+            "The two teams with the highest scores in preliminary rounds advance to the final. Winner and runner-up are determined by final round scores."
+
         ],
         date: "15/11/2024",
         venue: "UCEV"
     },
-    "mind-speak": {
-        title: "🗣 MindSpeak: Dialogue Sharing",
-        details: "Teams will discuss relevant topics in technology and share insights.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Max: 2 members",
-            "Duration: 45 minutes",
-            "Each team will have 15 minutes to present and 10 minutes for Q&A.",
-            "At least three members should be in a team.",
-            "Keep one arm's distance from your team members.",
-            "Each member has 15 seconds to pass dialogue to team members.",
-            "Rounds: Round 1: Tanglish dialogue, Round 2: Vernacular (Tamil Nadu), Round 3: Pure Tamil.",
-            "Conditions: No one should touch the earphones. No actions should be performed."
-        ],
-        date: "15/11/2024",
-        venue: "UCEV"
-    },
-    "verbo-clash": {
-        title: "🗣️ Verbo Clash: Debate",
-        details: "Engage in a structured debate on various topics.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Team Division: Participants will be divided into two teams: the Pessimistic team and the Optimistic team.",
-            "Speaking Time: Each participant will have 1 minute to deliver their content.",
-            "No Interruptions: Interruptions are to be avoided to ensure a smooth flow of discussion.",
-            "Consistent Perspective: The team supporting the motion must maintain their viewpoint throughout the debate."
-        ],
-        date: "15/11/2024",
-        venue: "UCEV"
-    },
+   "mind-speak": {
+    Image:"dialogue.jpeg",
+    "title": "🗨️ WordWave",  // Changed icon
+    "details": "Teams will discuss relevant topics in technology and share insights.",
+    "rules": [ 
+        "Each team must have at least three members.",
+        "Team members should keep one-arm distance.",
+        "One team member will try to pass off a dialogue and the others must identify it.",
+        "Members must relay the dialogue within 15 seconds.",
+        "No physical gestures or contact is allowed."
+    ],
+    "date": "15/11/2024",
+    "venue": "UCEV"
+},
+"verbo-clash": {
+    Image:"debate.jpeg",
+    "title": "🗯️ Debate",  // Changed icon
+    "details": "Engage in a structured debate on various topics.",
+    "rules": [
+        "The debate topic will be announced on the spot and participants will then be divided into two groups.",
+        "Each person has 1 minute to deliver their content.",
+        "Avoid interruptions while someone is speaking.",
+        "Among the participants, the judges will announce two candidates with compelling arguments on the debate topic as the winner and runner-up."
+    ],
+    "date": "15/11/2024",
+    "venue": "UCEV"
+},
+
     "cyber-showdown": {
-        title: "🎮 Cyber Showdown: E-Sports",
+        Image:"esports.jpeg",
+        title: "🎮E-Sports",
         details: "Teams will compete in popular E-Sports titles.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Max: 5 members",
-            "Duration: Varies by game",
-            "Winners will receive trophies and prizes!"
+        rules: [
+            "Players will be separated as a batch of 10 members.",
+            "At the end, Among all batches, Top 2 players with the Highest Scores will be announced as the Winner.",
+            "Bring your own mobile and headphones",
+            "Organizing commity will not be responsible for any network connectivity issues "
         ],
         date: "15/11/2024",
         venue: "UCEV"
     },
-    "word-wave": {
-        title: "Word Wave: Communication Challenge",
-        details: "A communication challenge to test teamwork and clarity.",
-        rules: [ // Changed 'Rules' to 'rules'
-            "Team Composition: Each team must have at least three or more members.",
-            "Spacing: Team members must maintain a one-arm distance from each other.",
-            "Communication Setup: Earphones/headphones are used for each member.",
-            "Dialogue Passing: Each member has 15 seconds to pass on the dialogue to the next teammate.",
-            "Point System: Points are awarded based on how many words from the dialogue are successfully conveyed to teammates.",
-            "General Conditions: No physical contact, no actions or gestures."
-        ],
-        date: "15/11/2024",
-        venue: "UCEV"
-    }
+    
 };
 
 
@@ -154,31 +143,30 @@ const events = {
 function showEventDetails(eventElement) {
     const eventKey = eventElement.getAttribute('data-event-key');
     const event = events[eventKey];
+    console.log(event)
 
-    // Check if the event exists
     if (!event) {
         console.error(`Event with key "${eventKey}" does not exist.`);
-        return; // Exit the function if the event is not found
+        return;
     }
 
-    // Get modal elements
     const modal = document.getElementById("eventModal");
+    const modalImage = document.getElementById("eventImg");
     const modalTitle = document.getElementById("modalTitle");
     const modalDescription = document.getElementById("modalDescription");
-    const modalDate = document.getElementById("modalDate");
-    const modalVenue = document.getElementById("modalVenue");
     const modalRules = document.getElementById("modalRules");
 
-    // Set modal content
+    // Debugging the image path
+    console.log("Image path:", event.Image);
+    modalImage.src = event.Image; // Ensure this matches your JSON structure
+
     modalTitle.innerHTML = event.title;
     modalDescription.innerText = event.details;
-    modalDate.innerText = `Date: ${event.date}`;
-    modalVenue.innerText = `Venue: ${event.venue}`;
     modalRules.innerHTML = "<strong>Rules:</strong><ul>" + event.rules.map(rule => `<li>${rule}</li>`).join("") + "</ul>";
 
-    // Show modal
     modal.style.display = "block";
 }
+
 
 // Event listener for close button
 document.getElementById("closeModal").onclick = function() {
@@ -231,4 +219,68 @@ window.onclick = function(event) {
 window.onload = function() {
     launchConfetti();
 };
-   
+// Function to handle adding the 'show' class to elements when they are in view
+function fadeUpOnScroll() {
+    const elements = document.querySelectorAll('.fade-up');
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.9) { // Trigger when 80% of the element is visible
+            el.classList.add('show');
+        }
+    });
+}
+
+// Trigger the function on scroll
+window.addEventListener('scroll', fadeUpOnScroll);
+
+// Trigger once on page load in case elements are already in view
+// Function to check if the element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Add scroll event listener to add the visible class when scrolled into view
+document.addEventListener("scroll", function () {
+    const dateDetails = document.querySelector(".date-details");
+
+    if (isInViewport(dateDetails)) {
+        dateDetails.classList.add("visible"); // Make visible when in viewport
+    } else {
+        dateDetails.classList.remove("visible"); // Hide when out of viewport
+    }
+});
+// Function to generate a random hex color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Function to change the colors of the date-details div
+function changeColors() {
+    const dateDetails = document.getElementById('dateDetails');
+    dateDetails.style.color = getRandomColor(); // Change font color
+    dateDetails.style.backgroundColor = getRandomColor(); // Change background color
+}
+
+// Initial color setup
+changeColors(); // Set initial colors
+
+// Change colors every 2 seconds
+setInterval(changeColors, 2000);
+
+
+
+
+
+
+
