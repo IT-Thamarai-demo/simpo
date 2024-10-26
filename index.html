@@ -18,8 +18,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Custom CSS -->
-  <link rel="icon" type="image/X-icon" href="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg">
+  <link rel="icon" type="image/X-icon" href="sympoback.jpeg">
   <link rel="stylesheet" href="style.css">
+   <!-- Animate.css -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script>
     function requestNotificationPermission() {
             if (Notification.permission === "default") {
@@ -64,6 +66,8 @@
         }
         requestNotificationPermission()
         showNotification()
+        AOS.init();
+    
         // Call the check function on page load
         
         
@@ -71,19 +75,19 @@
 </head>
 <body>
   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar- bg-dark fixed-top py-2">
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top py-2">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
         <!-- Logo (Reduced Size) -->
-        <img id="a" class="b me-2" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg" alt="Infonix Logo" style="height: 35px; width: auto;">
+        <img id="a" class="b me-2" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg" alt="Infonix Logo" style="height: 50px; width:50px;">
         <!-- Brand Name and Subtitle (Reduced Size) -->
         <div class="d-flex flex-column">
-          <span class="text-dark fw-bold" style="font-size: 1rem;">Infonix</span>
-          <sub class="text-dark" style="font-size: 0.7rem;">National Level Technical Symposium</sub>
+          <span class="text-dark fw-bold" style="font-size: 0.9rem;">Infonix</span>
+          <sub class="text-dark fw-bold" style="font-size: 0.6rem;">National Level Technical Symposium</sub>
         </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style="color: white;"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
@@ -97,7 +101,7 @@
             <a class="nav-link text-dark" href="#contact" style="font-size: 1rem;">Contact</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.9rem;">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1rem;">
               More
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -111,110 +115,187 @@
       </div>
     </div>
   </nav>
-
+  
+  
   <!-- Hero Section -->
-  <section id="hero" class="d-flex align-items-center" style="height: 100vh; background-image: url('Symposium-Photo-1-1536x1024.jpg'); background-size: cover; margin-top: 56px;">
-    <div class="container min-vh-200">
-        <h1 class="text-white min-vh-300">Welcome to Infonix  2k24  </h1>
-        <p class="lead text-white">Join us for an engaging symposium dedicated to exploring the latest trends and technologies in our field.</p>
-        <p class="text-white">Participate in thought-provoking discussions, collaborate with peers, and gain valuable insights from experienced professionals.</p>
-      <a href="#registration" class="btn btn-primary">Register Now</a>
-
+  <section id="hero" class="hero-section d-flex align-items-center">
+    <div class="container hero-container">
+        <p class="hero-title animate-slide-in">University College of Engineering Villupuram<br> Department Of Information Technology</p>
+        <h5 class="hero-subtitle text-white animate-slide-in-delay">Welcome to Infonix 2k24</h5>
+        <p class="hero-description lead text-white animate-slide-in-delay">
+          Join us to explore the latest in tech innovations.
+      </p>
+      
+        <a href="#registration" class="btn btn-primary hero-button animate-slide-in-delay">Register Now</a>
     </div>
+
+
+    
+  <div class="date-details animate-slide-in-delay">
+      <div class="date-day-abbreviation">FRI</div>
+      <div class="date-day">15</div>
+      <div class="date-month">November</div>
+  </div>
+</div>
+
+    <!-- Font Awesome CDN (include this in the <head> if not already included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+
+
+  
 </section>
+<br>
+
+
+
+
+
 
 
   <!-- About Section -->
-  <section id="about" class="py-5 fade-in">
-    <div class="container">
-        <h2>About the Symposium</h2>
-        <p>This annual event is conducted by Information Technology  University College of Engineering, Villupuram. Join us for various stalls and event participations to discuss the latest innovations and trends in technology.</p>
-        <p><strong>Date:</strong> 13th November 2024</p>
-        <p><strong>Organized by:</strong> University College of Engineering Villupuram (A Constituent College of Anna University, Chennai)</p>
-        <p><strong>Event Type:</strong> One Day National Level Technical Symposium</p>
-        <p><strong>Venue:</strong> University College of Engineering, Villupuram </p>
+  <section id="about" class="py-5 fade-up animate-slide-out-delay-2">
+    <div class="container about-container">
+        <h2 class="about-title"><i class="fas fa-info-circle"></i> About the Symposium</h2>
+        <div class="about-content">
+            <p class="about-description animate-slide-in"><i class="fas fa-lightbulb"></i> This annual event is conducted by the Information Technology department of the University College of Engineering, Villupuram. Join us for various stalls and event participations to discuss the latest innovations and trends in technology.</p>
+            <ul class="about-details">
+                <li><i class="fas fa-calendar-alt animate-slide-in-delay-1"></i> <strong>Date:</strong> 15th November 2024</li>
+                <li><i class="fas fa-university animate-slide-in"></i> <strong>Organized by:</strong> University College of Engineering Villupuram (A Constituent College of Anna University, Chennai)</li>
+                <li><i class="fas fa-cogs animate-slide-in"></i> <strong>Event Type:</strong> One Day National Level Technical Symposium</li>
+                <li><i class="fas fa-map-marker-alt animate-slide-in-delay"></i> <strong>Venue:</strong> University College of Engineering, Villupuram</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 
-<h3 id="c" class="animated-heading">Events Row <img id="a" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg"> </h3>
+<h3 id="c" class="animated-heading">Events Row <img id="a" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg" > </h3>
 
       <!-- Events Section Here -->
       <section id="eventsMarquee" class="events-marquee">
-        <div class="marquee-content">
-            <div class="event-item">🎉 Ideathon: Paper Presentation - Max: 3 to 4 members | Date: TBD | Venue:UCEV</div>
-            <div class="event-item">🔍 Bug Hunt: Debugging - Max: 2 members | Date: TBD | Venue:UCEV </div>
-            <div class="event-item">📊 Tech Post: Poster Presentation - Max: 3 to 5 members | Date: TBD | Venue: UCEV</div>
-            <div class="event-item">🔗 Linkup: Connection - Max: 3 members | Date: TBD | Venue: UCEV</div>
-            <div class="event-item">🗣 MindSpeak: Dialogue Sharing - Max: 2 members | Date: TBD | Venue: UCEV</div>
-            <div class="event-item">🗣️ Verbo Clash: Debate - Max: 3 members | Date: TBD | Venue: UCEV</div>
-            <div class="event-item">🎮 Cyber Showdown: E-Sports - Max: 5 members | Date: TBD | Venue: UCEV</div>
+        <div class="marquee-wrapper">
+            <div class="marquee-content" data-content="🎉 Ketras - Max: 3 to 4 members | Date: TBD | Venue: UCEV 🔍 Bug Hunt: Debugging - Max: 2 members | Date: TBD | Venue: UCEV 📊 Tech Post: Poster Presentation - Max: 3 to 5 members | Date: TBD | Venue: UCEV 🔗 Linkup: Connection - Max: 3 members | Date: TBD | Venue: UCEV 🗣 MindSpeak: Dialogue Sharing - Max: 2 members | Date: TBD | Venue: UCEV 🗣️ Verbo Clash: Debate - Max: 3 members | Date: TBD | Venue: UCEV 🎮 Cyber Showdown: E-Sports - Max: 5 members | Date: TBD | Venue: UCEV">
+                <div class="event-item">🎉 Kertas : Paper Presentation</div>
+                <div class="event-item">🔍 Bug Hunt: Debugging </div>
+                <div class="event-item">📊 Tech Post: Poster Presentation  </div>
+                <div class="event-item">🔗 Linkup: Connection  </div>
+                <div class="event-item">🗨️  MindSpeak: Dialogue Sharing  </div>
+                <div class="event-item">🗣️ Verbo Clash: Debate  </div>
+                <div class="event-item">🎮 Cyber Showdown: E-Sports </div>
+            </div>
         </div>
     </section>
+    
+    
+    
+    
 
-    <div class="row" id="events">
-      <div class="bg-primary bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
-          <h3>Technical Events</h3>
-          <br>
-          <ul class="event-list">
-              <li class="event-item ideathon list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="ideathon" onclick="showEventDetails(this)">
-                  <span>🎉</span> Ideathon: Paper Presentation
-
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-              <li class="event-item tech-post list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="tech-post" onclick="showEventDetails(this)">
-                  <span>📊</span> Tech Post: Poster Presentation
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-              <li class="event-item bug-hunt list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="bug-hunt" onclick="showEventDetails(this)">
-                  <span>🔍</span> Bug Hunt: Debugging
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-          </ul>
-      </div>
-      <br>
-      <div class="bg-success bg-gradient text-white p-4 rounded shadow col-md-6 mb-4">
-          <h3>Non-Technical Events</h3>
-          <br>
-          <ul class="event-list">
-              <li class="event-item linkup list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="linkup" onclick="showEventDetails(this)">
-                  <span>🔗</span> Linkup: Connection
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-              <li class="event-item mind-speak list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="mind-speak" onclick="showEventDetails(this)">
-                  <span>🗣</span> MindSpeak: Dialogue Sharing
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-              <li class="event-item verbo-clash list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="verbo-clash" onclick="showEventDetails(this)">
-                  <span>🗣️</span> Verbo Clash: Debate
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-              <li class="event-item cyber-showdown list-group-item d-flex justify-content-around align-items-center bg-light text-dark" data-event-key="cyber-showdown" onclick="showEventDetails(this)">
-                  <span>🎮</span> Cyber Showdown: E-Sports
-                  <button class="btn btn-info btn-sm float-right">View More</button>
-              </li>
-          </ul>
+    <div class="container mt-4" id="events">
+      <div class="row">
+          <!-- Technical Events Card -->
+          <div class="col-12 mb-4 aniamte-bouce-in" >
+              <div class="advanced-card bg-primary bg-gradient text-white p-4 rounded shadow">
+                  <h3 class="card-title">Technical Events</h3>
+                  <div class="event-list mt-3">
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="ideathon" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center" >
+                              <span class="event-icon">🎉</span>
+                              <span class="event-title">Kertas</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="tech-post" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">📊</span>
+                              <span class="event-title">TechPost</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="bug-hunt" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">🔍</span>
+                              <span class="event-title">BugHunt</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <!-- Non-Technical Events Card -->
+          <div class="col-12 mb-4 animate-bounce-in">
+              <div class="advanced-card bg-success bg-gradient text-white p-4 rounded shadow">
+                  <h3 class="card-title">Non-Technical Events</h3>
+                  <div class="event-list mt-3">
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="linkup" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">🔗</span>
+                              <span class="event-title"> Linkup</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="mind-speak" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">🗨️ </span>
+                              <span class="event-title">WordWave</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="verbo-clash" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">🗯️</span>
+                              <span class="event-title">Verboclash</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                      <div class="event-item d-flex justify-content-between align-items-center bg-light text-dark rounded mb-3" data-event-key="cyber-showdown" onclick="showEventDetails(this)">
+                          <div class="d-flex align-items-center">
+                              <span class="event-icon">🎮</span>
+                              <span class="event-title">Cyber Showdown</span>
+                          </div>
+                          <button class="btn btn-info btn-sm view-more-btn">View Event Details</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
-</div>
+  
+  
+  
 
 <!-- Popup Modal -->
-
-<div class="modal" id="eventModal" style="display: none;">
+<br>
+<br>
+<br>
+<br>
+<div class="modal" id="eventModal">
   <div class="modal-content">
-      <span class="close" id="closeModal">❌</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalDescription"></p>
-      <p id="modalDate"></p>
-      <p id="modalVenue"></p>
-      <p id="modalRules"></p>
+   
+    <span class="close" id="closeModal">❌</span>
+    
+    <!-- Event Image -->
+    <img src="" id="eventImg" alt="Event Image" class="advanced-image" loading="lazy">
+    
+    <h2 id="modalTitle" class="centered-title"><i class="icon-event"></i> Event Title</h2>
+    <p id="modalDescription">
+      Detailed description of the event goes here. It provides insights about what the event entails, objectives, and significance.
+    </p>
+    
+    <!-- Updated Rules with Font Awesome Icon -->
+    <p id="modalRules"><i class="fa fa-list-ul rules-icon"></i> Rules and guidelines for the event participation go here, listing important aspects.</p>
   </div>
 </div>
+
+
 
 
 </section>
   <!-- Registration Section -->
-  <section id="registration" class="py-5">
+  <section id="registration" class="py-5 demo">
     <div class="container">
         <div class="registration-wrapper text-center p-5">
             <h2 class="mb-4">Registration <img id="a" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg"></h2>
@@ -235,7 +316,7 @@
   
 
   <!-- Footer -->
-  <footer class=" text-white py-3">
+  <footer class=" text-white py-3 animate-fade-up">
     <section id="contact" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-4 animate-title">Contact Us</h2>
@@ -246,7 +327,7 @@
           <a href="mailto:infonix1.0symposium@gmail.com" class="contact-item fade-in text-center" style="text-decoration: none; color: inherit;">
             <div>
               <i class="fas fa-envelope icon-animate"></i>
-              <p >Email:</p>
+              <p class="text-black">Email:</p>
               <span class="text-black">infonix1.0symposium@gmail.com</span>
             </div>
           </a>
@@ -255,7 +336,7 @@
           <a href="https://www.instagram.com/infonix_2k24?igsh=eHU2YnR3bXFra3Z6" target="_blank" class="contact-item fade-in delay-1 text-center" style="text-decoration: none; color: inherit;">
             <div>
               <i class="fab fa-instagram icon-animate"></i>
-              <p>Instagram:</p>
+              <p class="text-black">Instagram:</p>
               <span class="text-black">@Infonix_1.0</span>
             </div>
           </a>
@@ -264,7 +345,7 @@
           <a href="tel:+918778729511" class="contact-item fade-in delay-5 text-center" style="text-decoration: none; color: inherit;">
             <div>
               <i class="fas fa-phone icon-animate"></i>
-              <p>Phone:</p>
+              <p class="text-black">Phone:</p>
               <span class="text-black">+91 8778729511</span>
               <br>
               <span class="text-black">+91 8190853274</span>
@@ -293,7 +374,7 @@
       </div>
     </section>
     <!-- Copyright Section -->
-    <div class="text-center text-white py-3 bg-grey" style="color: white;">
+    <div class="text-center text-black py-3 bg-grey" style="color: white;">
       <img id="a" src="WhatsApp Image 2024-10-09 at 12.19.58 AM.jpeg"><p class="mb-0">&copy; 2024 Infonix 2k24 Symposium. All Rights Reserved.</p>
     </div>
   </footer>
@@ -313,6 +394,7 @@
   <!-- Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
