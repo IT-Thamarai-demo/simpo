@@ -1211,7 +1211,6 @@ nav ul li:hover
 @media (max-width: 600px) {
   .date-details {
       position: fixed;
-      top: 70px;
       right: 1px;
       flex-direction: column;
       font-size: 0.8rem;
