@@ -169,7 +169,7 @@ inbody {
 .hero-container {
     z-index: 2;
     max-width: 900px;
-    margin: auto;
+    margin-right: -89px;
 }
 
 /* Hero Title Styling */
@@ -1046,7 +1046,8 @@ background-color: rgba(0, 0, 0, 0.85);
   border-radius: 10px; /* Rounded corners for the box */
   padding: 20px; /* Padding inside the box */
   position: relative; /* Position for better layering */
-  z-index: 1; /* Bring the box in front of the background */}
+  z-index: 1; /* Bring the box in front of the background */
+}
 
 
 
@@ -1056,16 +1057,17 @@ background-color: rgba(0, 0, 0, 0.85);
 }
 
 .registration-wrapper {
- 
+   background-color: white;
   padding: 40px;
   border-radius: 10px;
+ border:2px solid whitesmoke;
 }
 
 .registration-wrapper h2,
 .registration-wrapper h4,
 .registration-wrapper h5,
 .registration-wrapper p {
-  color: white; /* Set text color to black */
+  color: bleck; /* Set text color to black */
 }
 
 .registration-wrapper .btn {
@@ -1181,7 +1183,7 @@ nav ul li:hover
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 120px;
-  margin: auto;
+  margin-left: auto;
 }
 
 /* Style for day abbreviation */
@@ -1229,17 +1231,4 @@ nav ul li:hover
       font-size: 0.8rem;
   }
 }
-.demo
-{
 
-  background: linear-gradient(to bottom, rgba(0, 0,0, 0.9), rgba(0, 0, 0, 0.7)), url('sympoback.jpeg') center center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  color: #ffffff;
-  padding-top: 100px; /* Adjust for spacing */
-  padding-bottom: 100px; /* Adjust for spacing */
-  position: relative;
-  overflow: hidden;
-}
