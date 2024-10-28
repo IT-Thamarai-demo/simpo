@@ -1232,11 +1232,9 @@ nav ul li:hover
       font-size: 0.8rem;
   }
 }
-@media (max-widht: 600px)
-{
-.marquee-content
-{
-animation: marquee 60s linear infinite ; /*
+@media (max-width: 600px) {
+    .marquee-content {
+        animation: marquee 30s linear infinite; /* Faster marquee speed on mobile */
+    }
 }
 
-}
