@@ -108,7 +108,7 @@ const events = {
 },
 "verbo-clash": {
     Image:"debate.jpeg",
-    "title": "🗯️ Debate",  // Changed icon
+    "title": "🎙️ Debate",  // Changed icon
     "details": "Engage in a structured debate on various topics.",
     "rules": [
         "The debate topic will be announced on the spot and participants will then be divided into two groups.",
