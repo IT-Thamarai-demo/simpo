@@ -94,7 +94,7 @@ const events = {
     },
    "mind-speak": {
     Image:"dialogue.jpeg",
-    "title": "🗨️ WordWave",  // Changed icon
+    "title": "🎙️ WordWave",  // Changed icon
     "details": "Teams will discuss relevant topics in technology and share insights.",
     "rules": [ 
         "Each team must have at least three members.",
