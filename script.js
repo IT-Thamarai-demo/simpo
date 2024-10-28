@@ -54,12 +54,12 @@ const events = {
         title: "📊 Poster Presentation",
         details: "Present a poster on technological innovations and concepts.",
         rules: [ 
-            "1. Individual Participation.",
-            "2. Topics will be provided on the spot.",
-            "3. Ensure the poster is readable from a distance.",
-            "4. A3 sheets will be provided",
-            "5. Follow a logical structure (Title, Introduction, Methods, Results, Conclusions, References) and use diagrams effectively.",
-            "6. Bring necessary stationery like pens, pencils, and markers.",
+            "Individual Participation.",
+            " Topics will be provided on the spot.",
+            "Ensure the poster is readable from a distance.",
+            "4A3 sheets will be provided",
+            "Follow a logical structure (Title, Introduction, Methods, Results, Conclusions, References) and use diagrams effectively.",
+            "Bring necessary stationery like pens, pencils, and markers.",
         ],
         date: "15/11/2024",
         venue: "UCEV"
