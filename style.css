@@ -1,4 +1,4 @@
-inbody {
+body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
@@ -600,7 +600,7 @@ inbody {
 }
 .marquee-content {
   display: flex; /* Use flexbox for horizontal alignment */
-  animation: marquee 20s linear infinite ; /* Animation for the marquee */
+  animation: marquee 30s linear infinite ; /* Animation for the marquee */
 }
 
 .event-item {
