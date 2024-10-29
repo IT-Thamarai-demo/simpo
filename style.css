@@ -198,7 +198,7 @@ body {
 .hero-additional-info {
     font-size: 1rem;
     font-weight: 300;
-    margin-bottom: -2rem;
+    margin-bottom: 2rem;
 }
 
 /* Hero Button */
@@ -226,7 +226,8 @@ body {
 white-space:nowrap; /* Slightly larger */
   }
   .hero-description {
-      font-size: 1rem; /* Keep this size */
+      font-size: 1rem;
+margin-bottom:-3rem; /* Keep this size */
   }
   .hero-additional-info {
       font-size: 0.9rem; /* Increased for better visibility */
