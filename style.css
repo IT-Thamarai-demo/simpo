@@ -227,7 +227,7 @@ white-space:nowrap;/* Slightly larger */
   }
   .hero-description {
       font-size: 1rem;
-margin-bottom:-3rem; /* Keep this size */
+margin-bottom:1rem; /* Keep this size */
   }
   .hero-additional-info {
       font-size: 0.9rem; /* Increased for better visibility */
