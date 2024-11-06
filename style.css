@@ -169,7 +169,7 @@ body {
 .hero-container {
     z-index: 2;
     max-width: 900px;
-    margin:-2px;
+    margin:16%;
 }
 
 /* Hero Title Styling */
