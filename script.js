@@ -69,9 +69,8 @@ const events = {
         title: "🔍  Debugging",
         details: "Debugging challenges to test your programming skills.",
         rules: [ 
-            "A HackerRank account is required.",
             "C, Python, and Java programming languages are allowed.",
-            "Scores will be assigned based on two criteria: the number of bugs successfully resolved and the total time taken to fix all issues in the code snippet.",
+            "Scores will be assigned based on a criteria: the number of bugs successfully resolved.",
             "The top performer will be selected based on score "
         ],
         date: "15/11/2024",
