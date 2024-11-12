@@ -255,27 +255,16 @@ document.addEventListener("scroll", function () {
     }
 });
 // Function to generate a random hex color
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+document.addEventListener('mousemove', (event) => {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = `${event.clientX}px`;
+    particle.style.top = `${event.clientY}px`;
+    document.getElementById('particle-container').appendChild(particle);
 
-// Function to change the colors of the date-details div
-function changeColors() {
-    const dateDetails = document.getElementById('dateDetails');
-    dateDetails.style.color = getRandomColor(); // Change font color
-    dateDetails.style.backgroundColor = getRandomColor(); // Change background color
-}
+    setTimeout(() => particle.remove(), 1000); // Remove after animation
+});
 
-// Initial color setup
-changeColors(); // Set initial colors
-
-// Change colors every 2 seconds
-setInterval(changeColors, 2000);
 
 
 
