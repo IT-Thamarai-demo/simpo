@@ -1251,7 +1251,7 @@ nav ul li:hover
     position: absolute;
     width: 10px;
     height: 10px;
-    background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7);
     border-radius: 50%;
     animation: fadeOut 1s forwards;
 }
