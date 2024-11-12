@@ -42,11 +42,11 @@ const events = {
         title: "🎉 Kertas",
         details: "A paper presentation event focusing on current technology in the Engineering field.",
         rules: [ 
-            "Each team can have up to 4 members.",
-            "Teams have 5 minutes to present: 4 minutes for the presentation and 1 minute for Q&A.",
-            "The paper must relate to current technology in the engineering field.",
-            "Papers should follow the IEEE form",
-            "Each team must submit their PowerPoint (PPT) During registration.",
+            "Teams must have 1 to 4 members.",
+            "Each team has 5 minutes, including 4 minutes for the presentation and 1 minute for Q&A.",
+            "Papers don’t require IEEE format but should be clear and consistent.",
+            "Presentations must be submitted during registration with a minimum of 10 slides",
+            "Topics should focus on current booming engineering trends.",
         ]
     },
     "tech-post": {
