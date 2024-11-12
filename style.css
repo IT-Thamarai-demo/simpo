@@ -1253,13 +1253,8 @@ nav ul li:hover
     height: 50px;
   background: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7);
     border-radius: 50%;
-    animation: fadeOut 1s forwards;
+  
 }
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-}
+
 
 
