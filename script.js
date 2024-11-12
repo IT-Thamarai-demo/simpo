@@ -255,15 +255,7 @@ document.addEventListener("scroll", function () {
     }
 });
 // Function to generate a random hex color
-document.addEventListener('mousemove', (event) => {
-    const particle = document.createElement('div');
-    particle.classList.add('particle');
-    particle.style.left = `${event.clientX}px`;
-    particle.style.top = `${event.clientY}px`;
-    document.getElementById('particle-container').appendChild(particle);
 
-    setTimeout(() => particle.remove(), 1000); // Remove after animation
-});
 
 
 
