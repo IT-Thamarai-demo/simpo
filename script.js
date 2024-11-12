@@ -262,7 +262,7 @@ document.addEventListener('mousemove', (event) => {
     particle.style.top = `${event.clientY}px`;
     document.getElementById('particle-container').appendChild(particle);
 
-   
+    setTimeout(() => particle.remove(), 1000); // Remove after animation
 });
 
 
