@@ -1,4 +1,11 @@
-// Fade-in effect for sections
+
+myLibrary.festivalIntro({
+    festivalName: "Happy Republic Day 🎉",
+    containerId: "content",
+    buttonText: "Skip Intro",
+    imageUrl: "https://it-thamarai-demo.github.io/Protfolio/IMG-20230719-WA0007.jpg",
+    message: "U Academy celebrates this Republic Day with you! 🎓",
+  });
 $(window).on('scroll', function() {
   $('.fade-in').each(function() {
       const elementTop = $(this).offset().top;
